@@ -53,3 +53,12 @@ Generating eslint config file
 ```bash
 npx eslint --init
 ```
+
+### Testing framework
+
+[Jest Docs]()
+[Resource](https://blog.logrocket.com/testing-typescript-apps-using-jest/)
+
+```bash
+npm i -D jest ts-jest @types/jest
+```
