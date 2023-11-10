@@ -31,3 +31,5 @@ npx tsc --init
 ```
 
 Installed [ts-node](https://www.npmjs.com/package/ts-node) & [@types/node]()
+
+### Linting
