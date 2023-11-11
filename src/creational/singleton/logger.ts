@@ -14,7 +14,9 @@ class Singleton {
 
   // eslint-disable-next-line class-methods-use-this
   log(message: string) {
-    this.logs.push(new Log(new Date(), message));
+    const latestLog = new Log(new Date(), message);
+    this.logs.push(latestLog);
+    console.log(`${latestLog.timestamp.toISOString()} | ${latestLog.message}`);
   }
 }
 

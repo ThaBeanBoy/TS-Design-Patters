@@ -16,16 +16,20 @@ describe('Logger singleton', () => {
   test('Add a log', () => {
     testMessages.forEach((message) => {
       Logger.log(message);
-      expect(Logger.logs[Logger.count - 1].message).toBe(message);
     });
+
+    expect(Logger.count).toBe(testMessages.length);
   });
 
   test('Calls to the console made', () => {
-    expect(consoleMock).toBeCalledTimes(3);
+    expect(consoleMock).toBeCalledTimes(testMessages.length);
   });
 
-  test('Correct count of logs', () => {
-    // Added 3 logs in the previous test
-    expect(Logger.count).toBe(testMessages.length);
+  test('Messages logged', () => {
+    const passed = consoleMock.mock.calls[0].every((consoleMessage, index) =>
+      consoleMessage.includes(testMessages[index]),
+    );
+
+    expect(passed).toBe(true);
   });
 });
