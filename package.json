@@ -30,7 +30,7 @@
     "start": "ts-node src/index",
     "build": "tsc -p .",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "test": "vitest",
+    "test": "vitest --ui",
     "majestic": "majestic --app"
   },
   "keywords": [],
