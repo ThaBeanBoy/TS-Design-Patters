@@ -62,3 +62,9 @@ npx eslint --init
 ```bash
 npm i -D jest ts-jest @types/jest
 ```
+
+[Majestic]()
+
+```bash
+npm install -D majestic
+```
