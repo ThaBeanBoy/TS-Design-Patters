@@ -8,15 +8,13 @@ class Singleton {
     this.logs = [];
   }
 
-  // eslint-disable-next-line class-methods-use-this
   get count() {
-    // return this._logs.length;
-    throw new Error('Not implemented');
+    return this.logs.length;
   }
 
   // eslint-disable-next-line class-methods-use-this
-  log() {
-    throw new Error('Not implemented');
+  log(message: string) {
+    this.logs.push(new Log(new Date(), message));
   }
 }
 
