@@ -12,10 +12,10 @@ class Singleton {
     return this.logs.length;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   log(message: string) {
     const latestLog = new Log(new Date(), message);
     this.logs.push(latestLog);
+    // eslint-disable-next-line no-console
     console.log(`${latestLog.timestamp.toISOString()} | ${latestLog.message}`);
   }
 }
